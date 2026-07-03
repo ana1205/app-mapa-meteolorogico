@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buscador Geográfico Profesional</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Geográfico Profesional</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
+    <header>
+        <h1>📍 Localizador Geográfico Global 📍</h1>
+        <p>Consumo de API OpenStreetMap con control de versiones integral. Por: <strong>Ana Franco</strong></p>
+    </header>
 
+    <main>
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Introduce un lugar (ej. Monterrey, Madrid)...">
+            <button id="search-btn">Consultar API</button>
+        </div>
 
-<h1> Localizador Geográfico Global </h1>
-<p>Consumo de API OpenStreetMap con control de versiones integral. Por Ana 
-Gabrielle Franco Colin</p>
-</header>
-<main>
-<div class="search-container">
-<input type="text" id="city-input" placeholder="Introduce un lugar (ej.
-Monterrey, Madrid)...">
-<button id="search-btn">Consultar API</button>
-</div>
-<div id="weather-card" class="weather-card">
-<p>Introduce una ubicación para desplegar las coordenadas y descripción
-geográfica. </p>
-</div>
-</main>
-<script src="app.js"></script>
+        <!-- Contenedor para el mapa -->
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div id="weather-card" class="weather-card">
+            <p>Introduce una ubicación para desplegar las coordenadas y descripción geográfica.</p>
+        </div>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
